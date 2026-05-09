@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perth Bond Cleaning – Get Your Bond Back, Guaranteed</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d1117;
+    --cream: #f5f0e8;
+    --teal: #1a6b5e;
+    --teal-light: #2d9e8d;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --mist: #e8f2f0;
+    --white: #ffffff;
+    --text-muted: #6b7280;
+    --border: #ddd5c5;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(245,240,232,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 900;
+    color: var(--teal);
+    letter-spacing: -0.5px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 0.88rem; font-weight: 500; color: var(--ink); transition: color .2s; letter-spacing: 0.3px; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta {
+    background: var(--teal); color: var(--white);
+    padding: 0.55rem 1.4rem; border-radius: 100px;
+    font-size: 0.88rem; font-weight: 600; text-decoration: none;
+    transition: background .2s, transform .2s;
+    letter-spacing: 0.2px;
+  }
+  .nav-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+    padding-top: 68px;
+  }
+
+  .hero-bg-pattern {
+    position: absolute; inset: 0; z-index: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(26,107,94,0.07) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(201,168,76,0.08) 0%, transparent 50%);
+  }
+
+  .hero-left {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5rem 4rem 5rem 8%;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--mist); border: 1px solid rgba(26,107,94,0.2);
+    color: var(--teal); border-radius: 100px;
+    padding: 0.35rem 1rem; font-size: 0.78rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 1.8rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge::before { content: '✦'; font-size: 0.6rem; }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.7s ease 0.1s both;
+  }
+  .hero-title em { font-style: normal; color: var(--teal); }
+  .hero-title .accent-line {
+    display: block;
+    color: var(--gold);
+    -webkit-text-stroke: 1px var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem; line-height: 1.7;
+    color: #4a5568; max-width: 460px;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.7s ease 0.2s both;
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.7s ease 0.3s both;
+  }
+  .btn-primary {
+    background: var(--teal); color: var(--white);
+    padding: 0.9rem 2.2rem; border-radius: 100px;
+    font-size: 1rem; font-weight: 600; text-decoration: none;
+    transition: all .25s; box-shadow: 0 4px 20px rgba(26,107,94,0.3);
+    letter-spacing: 0.2px;
+  }
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,107,94,0.35); }
+  .btn-secondary {
+    background: transparent; color: var(--ink);
+    padding: 0.9rem 2.2rem; border-radius: 100px;
+    font-size: 1rem; font-weight: 500; text-decoration: none;
+    border: 1.5px solid var(--border);
+    transition: all .25s;
+  }
+  .btn-secondary:hover { border-color: var(--teal); color: var(--teal); background: var(--mist); }
+
+  .hero-trust {
+    display: flex; gap: 2.5rem;
+    animation: fadeUp 0.7s ease 0.4s both;
+  }
+  .trust-item { display: flex; flex-direction: column; }
+  .trust-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 900; color: var(--teal);
+    line-height: 1;
+  }
+  .trust-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
+
+  .hero-right {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    padding: 3rem 8% 3rem 2rem;
+  }
+
+  .hero-visual {
+    width: 100%; max-width: 480px;
+    position: relative;
+    animation: fadeIn 1s ease 0.4s both;
+  }
+
+  .hero-card-main {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(13,17,23,0.1), 0 4px 12px rgba(13,17,23,0.05);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card-main::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--teal), var(--gold));
+  }
+  .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .card-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  .card-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; }
+  .card-checklist { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+  .card-checklist li {
+    display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.88rem; font-weight: 500;
+  }
+  .card-checklist li::before {
+    content: '✓';
+    display: flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--mist); color: var(--teal);
+    font-size: 0.7rem; font-weight: 800; flex-shrink: 0;
+  }
+
+  .floating-badge {
+    position: absolute;
+    background: var(--white);
+    border-radius: 14px; padding: 0.9rem 1.2rem;
+    box-shadow: 0 8px 24px rgba(13,17,23,0.12);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.82rem; font-weight: 600;
+  }
+  .floating-badge .fb-emoji { font-size: 1.3rem; }
+  .fb-label { color: var(--text-muted); font-weight: 400; font-size: 0.75rem; }
+
+  .badge-guarantee {
+    top: -1.5rem; right: -1.5rem;
+    animation: float 4s ease-in-out infinite;
+  }
+  .badge-stars {
+    bottom: -1.5rem; left: -1.5rem;
+    animation: float 4s ease-in-out 1.5s infinite;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--teal);
+    color: var(--white);
+    padding: 1.2rem 5%;
+    display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;
+  }
+  .trust-bar-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.88rem; font-weight: 500;
+  }
+  .trust-bar-item .icon { font-size: 1.1rem; }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 5.5rem 8%; }
+  .section-label {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900; line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-size: 1rem; color: var(--text-muted);
+    line-height: 1.7; max-width: 560px; font-weight: 300;
+  }
+  .text-center { text-align: center; }
+  .text-center .section-sub { margin: 0 auto; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .service-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+    cursor: default;
+  }
+  .service-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(26,107,94,0.04), transparent);
+    opacity: 0; transition: opacity .3s;
+    border-radius: 20px;
+  }
+  .service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(13,17,23,0.1); border-color: rgba(26,107,94,0.3); }
+  .service-card:hover::after { opacity: 1; }
+  .service-card.featured {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: var(--white);
+  }
+  .service-card.featured .s-title,
+  .service-card.featured .s-desc { color: var(--white); }
+  .service-card.featured .s-desc { color: rgba(255,255,255,0.75); }
+  .service-card.featured .s-tag { background: rgba(255,255,255,0.15); color: var(--white); }
+  .service-card.featured:hover { background: var(--teal-light); }
+
+  .s-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
+  .s-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    margin-bottom: 0.6rem; color: var(--ink);
+  }
+  .s-desc { font-size: 0.88rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 1rem; }
+  .s-tag {
+    display: inline-block;
+    background: var(--mist); color: var(--teal);
+    border-radius: 100px; padding: 0.25rem 0.8rem;
+    font-size: 0.73rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  /* ── WHY CHOOSE US ── */
+  #why {
+    background: var(--ink);
+    color: var(--white);
+  }
+  #why .section-title { color: var(--white); }
+  #why .section-sub { color: rgba(255,255,255,0.6); }
+  .why-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; margin-top: 3.5rem; align-items: center;
+  }
+  .why-points { display: flex; flex-direction: column; gap: 2rem; }
+  .why-point { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .wp-icon {
+    width: 48px; height: 48px; border-radius: 14px;
+    background: rgba(26,107,94,0.25); border: 1px solid rgba(26,107,94,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; flex-shrink: 0;
+  }
+  .wp-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .wp-text { font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.6); font-weight: 300; }
+
+  .why-visual {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px; padding: 2.5rem;
+    position: relative;
+  }
+  .guarantee-circle {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(var(--teal) 0%, var(--gold) 50%, var(--teal-light) 100%);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 2rem;
+    position: relative;
+  }
+  .guarantee-inner {
+    width: 130px; height: 130px;
+    border-radius: 50%; background: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .guarantee-inner .g-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1;
+  }
+  .guarantee-inner .g-label { font-size: 0.65rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+  .why-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .wstat {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 1.2rem;
+    text-align: center;
+  }
+  .wstat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 900; color: var(--gold);
+  }
+  .wstat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 3px; }
+
+  /* ── PROCESS ── */
+  #process { background: var(--cream); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; margin-top: 3.5rem;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute; top: 32px; left: 12.5%; right: 12.5%;
+    height: 1px; background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal));
+    z-index: 0;
+  }
+  .step {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; padding: 0 1.5rem;
+  }
+  .step-num {
+    width: 64px; height: 64px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 900;
+    margin-bottom: 1.2rem;
+    position: relative;
+    background: var(--white);
+    border: 2px solid var(--teal);
+    color: var(--teal);
+    box-shadow: 0 4px 16px rgba(26,107,94,0.15);
+  }
+  .step:nth-child(2) .step-num { border-color: var(--teal-light); color: var(--teal-light); }
+  .step:nth-child(3) .step-num { border-color: var(--gold); color: var(--gold); }
+  .step:nth-child(4) .step-num { background: var(--teal); color: var(--white); border-color: var(--teal); }
+  .step-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .step-text { font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--white); }
+  .testi-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .testi-card {
+    border: 1px solid var(--border); border-radius: 20px;
+    padding: 2rem; background: var(--cream);
+    transition: transform .3s, box-shadow .3s;
+  }
+  .testi-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(13,17,23,0.08); }
+  .testi-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 1rem; }
+  .testi-text { font-size: 0.92rem; line-height: 1.7; color: #374151; margin-bottom: 1.5rem; font-style: italic; font-weight: 300; }
+  .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+  .testi-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--teal); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem;
+  }
+  .testi-name { font-weight: 600; font-size: 0.9rem; }
+  .testi-loc { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ── PRICING ── */
+  #pricing { background: var(--cream); }
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .pricing-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 24px; padding: 2.5rem;
+    transition: transform .3s, box-shadow .3s;
+    position: relative; overflow: hidden;
+  }
+  .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(13,17,23,0.1); }
+  .pricing-card.popular {
+    background: var(--teal); border-color: var(--teal); color: var(--white);
+  }
+  .popular-badge {
+    position: absolute; top: 0; right: 2rem;
+    background: var(--gold); color: var(--ink);
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    padding: 0.3rem 0.8rem; border-radius: 0 0 8px 8px;
+  }
+  .plan-name { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 0.5rem; }
+  .pricing-card.popular .plan-name { color: rgba(255,255,255,0.75); }
+  .plan-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; font-weight: 900; line-height: 1; margin-bottom: 0.3rem;
+  }
+  .plan-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .pricing-card.popular .plan-note { color: rgba(255,255,255,0.6); }
+  .plan-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
+  .plan-features li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.87rem; }
+  .plan-features li::before {
+    content: '✓'; font-weight: 800; color: var(--teal);
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--mist); display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; flex-shrink: 0;
+  }
+  .pricing-card.popular .plan-features li::before { background: rgba(255,255,255,0.15); color: var(--white); }
+  .plan-cta {
+    display: block; text-align: center;
+    padding: 0.85rem; border-radius: 100px;
+    font-weight: 600; font-size: 0.9rem; text-decoration: none;
+    background: var(--teal); color: var(--white);
+    transition: all .25s;
+  }
+  .plan-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
+  .pricing-card.popular .plan-cta {
+    background: var(--white); color: var(--teal);
+  }
+  .pricing-card.popular .plan-cta:hover { background: var(--cream); }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    background: linear-gradient(135deg, var(--teal) 0%, #0d4a40 100%);
+    padding: 5rem 8%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-strip::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 30% 50%, rgba(201,168,76,0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 70% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
+  }
+  .cta-strip .section-label { color: var(--gold-light); }
+  .cta-strip .section-title { color: var(--white); font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem; }
+  .cta-strip p { color: rgba(255,255,255,0.7); font-size: 1.05rem; margin-bottom: 2.5rem; font-weight: 300; }
+  .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+  .cta-btn-white {
+    background: var(--white); color: var(--teal);
+    padding: 1rem 2.5rem; border-radius: 100px;
+    font-size: 1rem; font-weight: 700; text-decoration: none;
+    transition: all .25s; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .cta-btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+  .cta-btn-outline {
+    background: transparent; color: var(--white);
+    padding: 1rem 2.5rem; border-radius: 100px;
+    font-size: 1rem; font-weight: 600; text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    transition: all .25s;
+  }
+  .cta-btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink); color: var(--white);
+    padding: 4rem 8% 2rem;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem; margin-bottom: 3rem;
+  }
+  .footer-brand .nav-logo { font-size: 1.4rem; margin-bottom: 1rem; display: block; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 280px; }
+  .footer-col h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .footer-col ul li a { text-decoration: none; font-size: 0.88rem; color: rgba(255,255,255,0.6); transition: color .2s; font-weight: 300; }
+  .footer-col ul li a:hover { color: var(--teal-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.8rem; color: rgba(255,255,255,0.3);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .services-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .process-steps::before { display: none; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 3rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    .services-grid, .pricing-grid, .testi-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .trust-bar { gap: 1.5rem; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .cta-strip { padding: 4rem 1.5rem; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Perth<span>Bond</span> Cleaning</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+  </ul>
+  <a href="tel:0485812250" class="nav-cta">📞 Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-left">
+    <span class="hero-badge">Perth's #1 Bond Cleaning Service</span>
+    <h1 class="hero-title">
+      Get Your Full<br>
+      <em>Bond Back</em><br>
+      <span class="accent-line">Guaranteed.</span>
+    </h1>
+    <p class="hero-sub">
+      Professional <a href="https://perthbondcleaning.com.au/" style="color:var(--teal);font-weight:500;text-decoration:underline;text-underline-offset:3px;">bond cleaning Perth</a> specialists. REIWA-standard checklists, insured cleaners, and a 100% bond-back guarantee — or we return for free.
+    </p>
+    <div class="hero-actions">
+      <a href="https://perthbondcleaning.com.au/" class="btn-primary">Get Instant Quote →</a>
+      <a href="tel:0485812250" class="btn-secondary">Call 0485 812 250</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <span class="trust-num">5,000+</span>
+        <span class="trust-label">Bonds Returned</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">100%</span>
+        <span class="trust-label">Guarantee</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">4.9★</span>
+        <span class="trust-label">Google Rating</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="floating-badge badge-guarantee">
+        <span class="fb-emoji">🛡️</span>
+        <div>
+          <div>Bond-Back Guarantee</div>
+          <div class="fb-label">Re-clean if needed, free</div>
+        </div>
+      </div>
+      <div class="hero-card-main">
+        <div class="card-icon">🏠</div>
+        <div class="card-heading">End of Lease Checklist</div>
+        <p class="card-text">Every clean follows the REIWA inspection checklist, ensuring nothing is missed before your final walkthrough.</p>
+        <ul class="card-checklist">
+          <li>All rooms, walls & skirting boards</li>
+          <li>Kitchen oven, rangehood & benches</li>
+          <li>Bathrooms & toilets deep cleaned</li>
+          <li>Carpets steam cleaned</li>
+          <li>Windows inside & out</li>
+          <li>Blinds, fans & light fittings</li>
+        </ul>
+      </div>
+      <div class="floating-badge badge-stars">
+        <span class="fb-emoji">⭐</span>
+        <div>
+          <div>Rated 4.9/5</div>
+          <div class="fb-label">1,200+ Google reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-item"><span class="icon">✅</span> 100% Bond-Back Guarantee</div>
+  <div class="trust-bar-item"><span class="icon">🔒</span> Fully Insured & Police Checked</div>
+  <div class="trust-bar-item"><span class="icon">📋</span> REIWA Standard Checklists</div>
+  <div class="trust-bar-item"><span class="icon">📅</span> Same-Week Availability</div>
+  <div class="trust-bar-item"><span class="icon">💳</span> Pay After Inspection</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="text-center">
+    <span class="section-label">What We Offer</span>
+    <h2 class="section-title">Complete Bond Cleaning Services</h2>
+    <p class="section-sub">From studio apartments to large family homes, our <a href="https://perthbondcleaning.com.au/" style="color:var(--teal);font-weight:500;text-decoration:underline;text-underline-offset:3px;">bond cleaning Perth</a> service covers every inch — tailored to Perth's real estate standards.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card featured">
+      <span class="s-icon">🏡</span>
+      <div class="s-title">End of Lease / Bond Cleaning</div>
+      <p class="s-desc">Our flagship service. A full property clean to REIWA standards, designed specifically to satisfy property managers and secure your full bond refund.</p>
+      <span class="s-tag">Most Popular</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🍳</span>
+      <div class="s-title">Deep Kitchen Cleaning</div>
+      <p class="s-desc">Oven degreasing, rangehood filter cleaning, benchtops, splashbacks, cupboards inside and out — leaving your kitchen spotless for inspection.</p>
+      <span class="s-tag">Included in Bond Clean</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🚿</span>
+      <div class="s-title">Bathroom & Toilet Sanitising</div>
+      <p class="s-desc">Descaling showers, scrubbing tiles and grout, disinfecting toilets, polishing mirrors and vanities to a streak-free shine.</p>
+      <span class="s-tag">Included in Bond Clean</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🪟</span>
+      <div class="s-title">Window & Track Cleaning</div>
+      <p class="s-desc">Interior and exterior window washing, frame wiping, and track vacuuming. Clear, streak-free glass that impresses every inspector.</p>
+      <span class="s-tag">Add-On Available</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🌀</span>
+      <div class="s-title">Carpet Steam Cleaning</div>
+      <p class="s-desc">Hot water extraction removes deep-set dirt, pet hair, and stains. Dry in as little as 2 hours. Required by most Perth property managers.</p>
+      <span class="s-tag">Add-On Available</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🪜</span>
+      <div class="s-title">Wall Mark & Scuff Removal</div>
+      <p class="s-desc">We spot-clean scuffs, crayon, and handprints from painted walls — a common reason bonds are withheld that we handle as standard.</p>
+      <span class="s-tag">Included in Bond Clean</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🌿</span>
+      <div class="s-title">Balcony & Outdoor Areas</div>
+      <p class="s-desc">Sweep and wipe down balconies, patios, and outdoor entertaining areas. Pressure washing available on request.</p>
+      <span class="s-tag">Add-On Available</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🪤</span>
+      <div class="s-title">Blinds & Curtain Cleaning</div>
+      <p class="s-desc">Wipe-down of venetian and vertical blinds, spot-cleaning curtains, and dusting pelmets — details that agents notice immediately.</p>
+      <span class="s-tag">Included in Bond Clean</span>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">🏗️</span>
+      <div class="s-title">Move-In / Builders Clean</div>
+      <p class="s-desc">Starting fresh? We'll deep-clean a new or post-renovation property — removing dust, residue, and construction debris before you move in.</p>
+      <span class="s-tag">Standalone Service</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <span class="section-label">Why Perth Chooses Us</span>
+  <h2 class="section-title">The Bond-Back Difference</h2>
+  <p class="section-sub">We don't just clean — we make sure you get your money back. Our <a href="https://perthbondcleaning.com.au/" style="color:var(--gold-light);font-weight:500;text-decoration:underline;text-underline-offset:3px;">bond cleaning Perth</a> process is built around local rental standards from the ground up.</p>
+  <div class="why-grid">
+    <div class="why-points">
+      <div class="why-point">
+        <div class="wp-icon">🛡️</div>
+        <div>
+          <div class="wp-title">100% Bond-Back Guarantee</div>
+          <p class="wp-text">If your property manager finds an issue with our clean, we'll return within 72 hours and re-clean at zero cost to you. No questions, no excuses.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="wp-icon">📋</div>
+        <div>
+          <div class="wp-title">REIWA-Standard Checklists</div>
+          <p class="wp-text">Our cleaning teams follow the exact same checklists used by Perth property managers during inspections — so nothing gets missed.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="wp-icon">👷</div>
+        <div>
+          <div class="wp-title">Vetted, Insured Cleaners</div>
+          <p class="wp-text">Every team member is police checked, fully insured for public liability, and professionally trained. Your property is in safe hands.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="wp-icon">⏱️</div>
+        <div>
+          <div class="wp-title">Fast Turnaround</div>
+          <p class="wp-text">Same-week booking available across Perth metro. We work around your lease-end date and can accommodate tight timelines.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="guarantee-circle">
+        <div class="guarantee-inner">
+          <div class="g-num">100%</div>
+          <div class="g-label">Bond Back<br>Guarantee</div>
+        </div>
+      </div>
+      <div class="why-stats">
+        <div class="wstat">
+          <div class="wstat-num">5,000+</div>
+          <div class="wstat-label">Successful Bond Cleans</div>
+        </div>
+        <div class="wstat">
+          <div class="wstat-num">4.9★</div>
+          <div class="wstat-label">Average Rating</div>
+        </div>
+        <div class="wstat">
+          <div class="wstat-num">72hr</div>
+          <div class="wstat-label">Re-clean Guarantee</div>
+        </div>
+        <div class="wstat">
+          <div class="wstat-num">10yr+</div>
+          <div class="wstat-label">Serving Perth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="text-center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Simple. Stress-Free. Done.</h2>
+    <p class="section-sub">Getting your bond back shouldn't be complicated. Here's our streamlined 4-step process.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Get a Quote</div>
+      <p class="step-text">Fill out our quick online form or call us. We provide a transparent, fixed-price quote based on your property size and requirements.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">Book Your Clean</div>
+      <p class="step-text">Choose a date and time that suits your move-out schedule. We offer flexible slots including weekends and public holidays.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">We Clean</div>
+      <p class="step-text">Our professional team arrives fully equipped and cleans your property to REIWA inspection standards — top to bottom.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-title">Get Bond Back</div>
+      <p class="step-text">Pass your inspection and collect your full bond. If there's an issue, we return for free within 72 hours. Simple as that.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="text-center">
+    <span class="section-label">Happy Tenants</span>
+    <h2 class="section-title">Real Perth Renters, Real Results</h2>
+    <p class="section-sub">Don't just take our word for it — hear from Perth tenants who got their full bond back with us.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Got the full $3,200 bond back. The property manager actually said it was the cleanest end-of-lease job they'd seen in years. Absolute legends."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SC</div>
+        <div>
+          <div class="testi-name">Sarah C.</div>
+          <div class="testi-loc">Subiaco, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Used them for our 4-bedroom home in Joondalup. The team was punctual, professional, and the oven looked brand new. Couldn't be happier."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">MR</div>
+        <div>
+          <div class="testi-name">Mark R.</div>
+          <div class="testi-loc">Joondalup, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"I was stressed about moving out but Perth Bond Cleaning made it so easy. The carpet steam clean was incredible — stains I thought were permanent are gone."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">AT</div>
+        <div>
+          <div class="testi-name">Amy T.</div>
+          <div class="testi-loc">Fremantle, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"The re-clean guarantee gave me peace of mind. Passed first inspection no issues. Booked in less than 24 hours — fast, friendly, effective."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">JL</div>
+        <div>
+          <div class="testi-name">Jordan L.</div>
+          <div class="testi-loc">Victoria Park, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"The window cleaning add-on was worth every cent. They cleaned tracks I didn't even know were dirty. Property manager was impressed, bond returned same day."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">PW</div>
+        <div>
+          <div class="testi-name">Priya W.</div>
+          <div class="testi-loc">Mount Lawley, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Had a difficult landlord but Perth Bond Cleaning's REIWA checklist approach meant there was nothing to dispute. $4,500 bond returned. Can't recommend enough."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">TK</div>
+        <div>
+          <div class="testi-name">Tom K.</div>
+          <div class="testi-loc">Cottesloe, Perth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="text-center">
+    <span class="section-label">Transparent Pricing</span>
+    <h2 class="section-title">Fixed Prices, No Surprises</h2>
+    <p class="section-sub">All prices are fixed — no hourly rates, no hidden fees. What you're quoted is what you pay.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="plan-name">Studio / 1 Bed</div>
+      <div class="plan-price">From $249</div>
+      <div class="plan-note">Apartment or house up to 1 bedroom</div>
+      <ul class="plan-features">
+        <li>Full bond clean to REIWA standard</li>
+        <li>Kitchen deep clean</li>
+        <li>Bathroom & toilet</li>
+        <li>Floors mopped & vacuumed</li>
+        <li>Blinds & light fittings</li>
+        <li>72-hour re-clean guarantee</li>
+      </ul>
+      <a href="https://perthbondcleaning.com.au/" class="plan-cta">Get Instant Quote</a>
+    </div>
+    <div class="pricing-card popular">
+      <div class="popular-badge">Best Value</div>
+      <div class="plan-name">2–3 Bedroom</div>
+      <div class="plan-price">From $389</div>
+      <div class="plan-note">Most common Perth rental size</div>
+      <ul class="plan-features">
+        <li>Everything in Studio plan</li>
+        <li>Multiple bathrooms included</li>
+        <li>Wall marks & scuff removal</li>
+        <li>Garage/laundry areas</li>
+        <li>Carpet steam clean (2 rooms)</li>
+        <li>Window cleaning included</li>
+      </ul>
+      <a href="https://perthbondcleaning.com.au/" class="plan-cta">Get Instant Quote</a>
+    </div>
+    <div class="pricing-card">
+      <div class="plan-name">4+ Bedroom</div>
+      <div class="plan-price">From $549</div>
+      <div class="plan-note">Large family homes & properties</div>
+      <ul class="plan-features">
+        <li>Everything in 2–3 Bed plan</li>
+        <li>Full carpet steam clean</li>
+        <li>Outdoor / balcony cleaning</li>
+        <li>Pressure wash on request</li>
+        <li>Priority booking slots</li>
+        <li>Dedicated account manager</li>
+      </ul>
+      <a href="https://perthbondcleaning.com.au/" class="plan-cta">Get Instant Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip" id="contact">
+  <span class="section-label">Ready to Get Started?</span>
+  <h2 class="section-title">Book Your Perth Bond Clean Today</h2>
+  <p>Same-week availability across Perth metro. Get a free, no-obligation quote in minutes.</p>
+  <div class="cta-actions">
+    <a href="tel:0485812250" class="cta-btn-white">📞 Call 0485 812 250</a>
+    <a href="mailto:info@perthbondcleaning.com.au" class="cta-btn-outline">✉️ Email Us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">Perth<span>Bond</span> Cleaning</span>
+      <p>Perth's most trusted end-of-lease cleaning service. REIWA-standard, fully insured, with a 100% bond-back guarantee since 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">End of Lease Cleaning</a></li>
+        <li><a href="#">Carpet Steam Cleaning</a></li>
+        <li><a href="#">Window Cleaning</a></li>
+        <li><a href="#">Builders Clean</a></li>
+        <li><a href="#">Move-In Cleaning</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas We Serve</h4>
+      <ul>
+        <li><a href="#">Perth CBD</a></li>
+        <li><a href="#">Fremantle</a></li>
+        <li><a href="#">Joondalup</a></li>
+        <li><a href="#">Subiaco</a></li>
+        <li><a href="#">Cottesloe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Perth Bond Cleaning. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
